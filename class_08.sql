@@ -9,7 +9,7 @@ insert into membertbl values('jsa', '김주한', '부산시 진구');
 -- 이름 홍길동, 주소가 부산지 진구
 
 select *
-from membertbl
+from membertblf
 where membername = '홍길동'
 and memberaddress = '부산시 진구';
 
