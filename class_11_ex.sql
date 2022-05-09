@@ -138,7 +138,7 @@ where to_date <> '9999-01-01';
 -- 집계함수를 쓸 때 having 절 씀
 select s.emp_no, s.salary, s.to_date, e.hire_date
 from salaries as s
-left join employees as e
+inner join employees as e
 on s.emp_no = e.emp_no
 group by s.emp_no
 having e.hire_date > '1990-01-01';
@@ -192,12 +192,13 @@ having e.hire_date > '1990-01-01';
 
 
 
-
+use employees;
 
 -- 연봉 130000 이상 받은 직원
 select *
 from dept_emp as d
-right join salaries as s
+right join 
+salaries as s
 on d.emp_no = s.emp_no
 where s.salary >= 130000;
 
